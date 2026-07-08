@@ -265,14 +265,14 @@ button {
 .scribble::after {
   position: absolute;
   z-index: -1;
-  bottom: 5%;
-  left: -2%;
-  width: 105%;
-  height: 18%;
+  bottom: -0.1em;
+  left: 1%;
+  width: 98%;
+  height: 0.07em;
   content: "";
   border-radius: 999px;
   background: var(--lime);
-  transform: rotate(-1deg);
+  transform: rotate(-0.5deg);
 }
 
 .hero-lede {
