@@ -264,14 +264,16 @@ button {
 
 .scribble::after {
   position: absolute;
-  z-index: -1;
-  bottom: -0.1em;
+  z-index: 1;
+  top: calc(100% + 0.035em);
+  bottom: auto;
   left: 1%;
   width: 98%;
-  height: 0.07em;
+  height: 0.055em;
   content: "";
   border-radius: 999px;
   background: var(--lime);
+  pointer-events: none;
   transform: rotate(-0.5deg);
 }
 
