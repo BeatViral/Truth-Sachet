@@ -98,6 +98,49 @@ panelTabs.forEach((tab) => {
 
 renderPanel("supplements");
 
+const copyButtons = document.querySelectorAll("[data-copy-target]");
+
+function copyTextFallback(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.top = "-999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  const copied = document.execCommand("copy");
+  textarea.remove();
+  return copied;
+}
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const targetId = button.getAttribute("data-copy-target");
+    const target = targetId ? document.getElementById(targetId) : null;
+    const text = target?.textContent?.trim();
+    const status = document.querySelector(".copy-status");
+
+    if (!text) {
+      if (status) status.textContent = "Brief text was not found.";
+      return;
+    }
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else if (!copyTextFallback(text)) {
+        throw new Error("Clipboard fallback failed");
+      }
+
+      button.classList.add("copied");
+      if (status) status.textContent = "Manufacturer brief copied.";
+      setTimeout(() => button.classList.remove("copied"), 1600);
+    } catch (error) {
+      if (status) status.textContent = "Copy failed. Select the brief text manually.";
+    }
+  });
+});
+
 const menuButton = document.querySelector(".menu-button");
 const mainNav = document.querySelector(".main-nav");
 
