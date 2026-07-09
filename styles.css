@@ -3327,26 +3327,51 @@ button {
 
 .use-problem-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.use-problem-list span {
+.use-problem-list article {
   position: relative;
-  padding: 15px 16px 15px 42px;
+  min-height: 128px;
+  padding: 22px 20px 20px 54px;
   border: 1px solid rgba(11, 9, 19, 0.11);
-  border-radius: 18px;
+  border-radius: 22px;
   background: rgba(255, 253, 247, 0.64);
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.45;
+  box-shadow: 0 16px 42px rgba(18, 11, 42, 0.06);
 }
 
-.use-problem-list span::before {
+.use-problem-list article::before {
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 22px;
+  left: 20px;
+  display: grid;
+  width: 22px;
+  height: 22px;
   content: "?";
-  color: var(--coral);
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--coral);
+  font-size: 12px;
   font-weight: 950;
+  place-items: center;
+}
+
+.use-problem-list strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.use-problem-list p {
+  margin: 0;
+  color: #514c5a;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .use-highlight-row {
@@ -3573,11 +3598,78 @@ button {
   gap: 14px;
 }
 
+.market-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.market-chip-list span {
+  padding: 9px 10px;
+  border: 1px solid rgba(11, 9, 19, 0.09);
+  border-radius: 999px;
+  background: rgba(255, 253, 247, 0.76);
+  color: #514c5a;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.roadmap-copy {
+  max-width: 980px;
+}
+
+.product-line-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 14px;
+}
+
 .product-line-grid article {
-  justify-content: center;
+  position: relative;
+  min-height: 235px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 9, 19, 0.12);
+  border-radius: 28px;
   color: var(--white);
-  background: var(--ink);
-  text-align: center;
+  background:
+    radial-gradient(circle at 88% 14%, rgba(200, 255, 54, 0.26), transparent 30%),
+    radial-gradient(circle at 8% 90%, rgba(142, 92, 255, 0.24), transparent 36%),
+    var(--ink);
+  box-shadow: 0 22px 60px rgba(11, 9, 19, 0.13);
+}
+
+.product-line-grid article > span {
+  display: inline-flex;
+  margin-bottom: 42px;
+  padding: 9px 11px;
+  border: 1px solid rgba(255, 253, 247, 0.14);
+  border-radius: 999px;
+  color: var(--lime);
+  background: rgba(255, 253, 247, 0.06);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.product-line-grid h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.product-line-grid p {
+  margin: 0;
+  color: rgba(255, 253, 247, 0.68);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
 }
 
 .verified-grid {
@@ -3659,26 +3751,116 @@ button {
   text-align: center;
 }
 
+.badge-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .badge-flow article {
+  min-height: 260px;
+  padding: 24px;
+  border: 1px solid rgba(11, 9, 19, 0.11);
+  border-radius: 28px;
   background: rgba(255, 253, 247, 0.72);
+  box-shadow: 0 18px 45px rgba(18, 11, 42, 0.07);
+}
+
+.badge-flow b {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 34px;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--lime);
+  place-items: center;
+}
+
+.badge-flow h3,
+.brand-benefit-grid h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.badge-flow p,
+.brand-benefit-grid p {
+  margin: 0;
+  color: #514c5a;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.brand-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 14px;
+}
+
+.brand-benefit-grid article {
+  position: relative;
+  min-height: 190px;
+  padding: 24px 24px 24px 58px;
+  border: 1px solid rgba(11, 9, 19, 0.11);
+  border-radius: 26px;
+  background: rgba(255, 253, 247, 0.66);
+  box-shadow: 0 18px 45px rgba(18, 11, 42, 0.06);
+}
+
+.brand-benefit-grid article::before {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  content: "✓";
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--lime);
+  font-weight: 950;
+  place-items: center;
 }
 
 .badge-location-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
   margin-bottom: 24px;
 }
 
-.badge-location-grid span {
-  padding: 18px;
+.badge-location-grid article {
+  min-height: 132px;
+  padding: 22px;
   border: 1px solid rgba(11, 9, 19, 0.11);
-  border-radius: 20px;
+  border-radius: 24px;
   background: rgba(255, 253, 247, 0.66);
+  box-shadow: 0 18px 45px rgba(18, 11, 42, 0.06);
+}
+
+.badge-location-grid span {
+  display: inline-flex;
+  margin-bottom: 24px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  color: var(--violet-dark);
+  background: rgba(142, 92, 255, 0.1);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.badge-location-grid strong {
+  display: block;
   font-size: 12px;
   font-weight: 950;
-  letter-spacing: 0.1em;
-  text-align: center;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -3713,7 +3895,8 @@ button {
   }
 
   .comparison-grid,
-  .scenario-grid {
+  .scenario-grid,
+  .badge-flow {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -3725,10 +3908,12 @@ button {
   }
 
   .use-highlight-row,
+  .use-problem-list,
   .water-filter-copy,
   .result-example-grid,
   .scenario-grid,
-  .comparison-grid {
+  .comparison-grid,
+  .badge-flow {
     grid-template-columns: 1fr;
   }
 
