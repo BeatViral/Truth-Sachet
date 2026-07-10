@@ -10,6 +10,90 @@
     <meta name="theme-color" content="#0b0913" />
     <title>What Truth Sachet Is For</title>
     <link rel="stylesheet" href="../styles.css?v=20260710-7" />
+    <style>
+      /* Truth Sachet use-cases final polish overrides */
+      .badge-flow {
+        list-style: none;
+        padding-left: 0;
+      }
+      .badge-flow li {
+        position: relative;
+      }
+      .badge-flow li > b {
+        display: inline-grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: var(--lime);
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 950;
+        letter-spacing: 0.08em;
+      }
+      .badge-location-grid li {
+        display: grid;
+        align-content: center;
+        min-height: 104px;
+      }
+      .badge-location-grid li strong {
+        display: block;
+        font-size: clamp(18px, 2vw, 26px);
+        line-height: 1;
+      }
+      .verified-mockup {
+        text-align: center;
+      }
+      .verified-ring {
+        display: grid;
+        place-items: center;
+        width: min(330px, 100%);
+        aspect-ratio: 1;
+        margin: 0 auto 22px;
+        padding: 32px;
+        border: 3px solid rgba(200, 255, 54, 0.88);
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 45%, rgba(255,255,255,0.12), transparent 48%),
+          linear-gradient(135deg, rgba(200,255,54,0.18), rgba(142,92,255,0.2)),
+          rgba(255,255,255,0.06);
+        box-shadow:
+          inset 0 0 0 10px rgba(255,255,255,0.06),
+          inset 0 0 0 18px rgba(200,255,54,0.08),
+          0 28px 70px rgba(0,0,0,0.28);
+      }
+      .verified-ring span {
+        color: var(--lime);
+        font-size: 11px;
+        font-weight: 950;
+        letter-spacing: 0.2em;
+      }
+      .verified-ring strong {
+        color: var(--white);
+        font-size: clamp(42px, 5vw, 64px);
+        line-height: 0.86;
+        letter-spacing: -0.07em;
+      }
+      .verified-ring small {
+        max-width: 210px;
+        color: rgba(255,255,255,0.72);
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+      .verified-ring em {
+        padding: 7px 10px;
+        border: 1px solid rgba(200,255,54,0.38);
+        border-radius: 999px;
+        color: var(--lime);
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 950;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+    </style>
+
   </head>
   <body class="partner-page use-page">
     <div class="noise" aria-hidden="true"></div>
@@ -631,32 +715,32 @@
         </div>
         <ol class="badge-flow">
           <li>
-            <b>1</b>
+            <b>01</b>
             <h3>Brand submits product or batch</h3>
             <p>A supplement, herbal, protein, spice, turmeric, or food-powder brand submits a product for review.</p>
           </li>
           <li>
-            <b>2</b>
+            <b>02</b>
             <h3>Truth Sachet screening pathway is used</h3>
             <p>The product is screened using the relevant Truth Sachet pathway for that product category.</p>
           </li>
           <li>
-            <b>3</b>
+            <b>03</b>
             <h3>Product, batch number, test date, and screening outcome are recorded</h3>
             <p>Product, batch number, test date, and screening outcome are recorded for traceability.</p>
           </li>
           <li>
-            <b>4</b>
+            <b>04</b>
             <h3>Lab confirmation is used where stronger proof is required</h3>
             <p>Where stronger proof is required, independent lab confirmation is used, including heavy-metal testing where relevant.</p>
           </li>
           <li>
-            <b>5</b>
+            <b>05</b>
             <h3>Badge approval is granted only if defined standards are met</h3>
             <p>If the defined standard is met, the brand may display the future badge for that product or batch.</p>
           </li>
           <li>
-            <b>6</b>
+            <b>06</b>
             <h3>Future QR lookup explains what was checked and when</h3>
             <p>A future QR lookup could explain what was checked, when it was checked, and what the badge means.</p>
           </li>
@@ -713,15 +797,15 @@
           </div>
         </div>
         <ul class="badge-location-grid">
-          <li><span>Bottles</span><strong>Supplement bottles</strong></li>
-          <li><span>Tubs</span><strong>Protein powder tubs</strong></li>
-          <li><span>Sports</span><strong>Pre-workout tubs</strong></li>
-          <li><span>Pouches</span><strong>Herbal powder pouches</strong></li>
-          <li><span>Spices</span><strong>Spice powder packs</strong></li>
-          <li><span>Turmeric</span><strong>Turmeric packets</strong></li>
-          <li><span>Online</span><strong>Ecommerce product pages</strong></li>
-          <li><span>Retail</span><strong>Retail shelf tags</strong></li>
-          <li><span>Lookup</span><strong>QR code verification pages</strong></li>
+          <li><strong>Supplement bottles</strong></li>
+          <li><strong>Protein powder tubs</strong></li>
+          <li><strong>Pre-workout tubs</strong></li>
+          <li><strong>Herbal powder pouches</strong></li>
+          <li><strong>Spice powder packs</strong></li>
+          <li><strong>Turmeric packets</strong></li>
+          <li><strong>Ecommerce product pages</strong></li>
+          <li><strong>Retail shelf tags</strong></li>
+          <li><strong>QR code verification pages</strong></li>
         </ul>
         <div class="partner-warning badge-disclaimer">
           <strong>Future badge disclaimer</strong>
@@ -805,6 +889,7 @@
         </p>
         <div class="footer-meta">
           <span class="patent-badge">PATENT PENDING</span>
+          <a href="#top">USE CASES ↑</a>
           <a href="../partner-brief/">OEM / PARTNER BRIEF</a>
           <a href="../">MAIN TRUTH SACHET PAGE</a>
           <a href="#top">BACK TO TOP ↑</a>
