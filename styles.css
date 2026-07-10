@@ -3624,10 +3624,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 0;
   margin-top: 18px;
+  list-style: none;
 }
 
-.market-chip-list span {
+.market-chip-list li {
   padding: 9px 10px;
   border: 1px solid rgba(11, 9, 19, 0.09);
   border-radius: 999px;
@@ -3745,10 +3747,11 @@ button {
 
 .verified-ring strong {
   max-width: 280px;
-  font-size: clamp(34px, 5vw, 58px);
+  font-size: clamp(46px, 6vw, 76px);
   font-weight: 950;
-  letter-spacing: -0.07em;
-  line-height: 0.82;
+  letter-spacing: -0.08em;
+  line-height: 0.76;
+  text-shadow: 0 0 28px rgba(200, 255, 54, 0.18);
   text-transform: uppercase;
 }
 
