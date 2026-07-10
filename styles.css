@@ -3568,10 +3568,12 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  padding: 0;
   margin-top: 26px;
+  list-style: none;
 }
 
-.result-example-grid span {
+.result-example-grid li {
   position: relative;
   padding: 18px;
   padding-top: 42px;
@@ -3582,7 +3584,7 @@ button {
   line-height: 1.5;
 }
 
-.result-example-grid span::before {
+.result-example-grid li::before {
   position: absolute;
   top: 16px;
   left: 18px;
@@ -3780,9 +3782,12 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.badge-flow article {
+.badge-flow li {
   min-height: 260px;
   padding: 24px;
   border: 1px solid rgba(11, 9, 19, 0.11);
@@ -3822,9 +3827,12 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.brand-benefit-grid article {
+.brand-benefit-grid li {
   position: relative;
   min-height: 158px;
   padding: 24px;
@@ -3860,10 +3868,13 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 14px;
+  padding: 0;
+  margin-top: 0;
   margin-bottom: 24px;
+  list-style: none;
 }
 
-.badge-location-grid article {
+.badge-location-grid li {
   min-height: 132px;
   padding: 22px;
   border: 1px solid rgba(11, 9, 19, 0.11);
